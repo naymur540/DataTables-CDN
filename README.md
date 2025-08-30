@@ -1,3 +1,8 @@
+# Bootstrap DataTable Example
+
+This is an example of a Bootstrap 5 DataTable integrated with jQuery.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,33 +50,22 @@
         <td>2011/04/25</td>
         <td>$320,800</td>
       </tr>
-      <tr>
-        <td>Garrett Winters</td>
-        <td>Accountant</td>
-        <td>Tokyo</td>
-        <td>63</td>
-        <td>2011/07/25</td>
-        <td>$170,750</td>
-      </tr>
-      <tr>
-        <td>Ashton Cox</td>
-        <td>Junior Technical Author</td>
-        <td>San Francisco</td>
-        <td>66</td>
-        <td>2009/01/12</td>
-        <td>$86,000</td>
-      </tr>
-      <!-- Add more rows as needed -->
     </tbody>
   </table>
 </div>
 
 <script>
-  $(document).ready(function () {
+   $(document).ready(function() {
     $('#myTable').DataTable({
-      responsive: true
+      "paging": true,
+      "lengthChange": false,
+      "searching": true,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true
     });
-  });
+});
 </script>
 
 </body>
