@@ -1,1 +1,78 @@
-# DataTables-CDN
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap DataTable Example</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- DataTables CSS for Bootstrap 5 -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
+
+  <!-- jQuery (required for DataTables) -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- DataTables JS -->
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+</head>
+<body class="bg-light">
+
+<div class="container mt-5">
+  <h2 class="mb-4 text-center">Employee List</h2>
+  <table id="myTable" class="table table-striped table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <th>Name</th>
+        <th>Position</th>
+        <th>Office</th>
+        <th>Age</th>
+        <th>Start Date</th>
+        <th>Salary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Tiger Nixon</td>
+        <td>System Architect</td>
+        <td>Edinburgh</td>
+        <td>61</td>
+        <td>2011/04/25</td>
+        <td>$320,800</td>
+      </tr>
+      <tr>
+        <td>Garrett Winters</td>
+        <td>Accountant</td>
+        <td>Tokyo</td>
+        <td>63</td>
+        <td>2011/07/25</td>
+        <td>$170,750</td>
+      </tr>
+      <tr>
+        <td>Ashton Cox</td>
+        <td>Junior Technical Author</td>
+        <td>San Francisco</td>
+        <td>66</td>
+        <td>2009/01/12</td>
+        <td>$86,000</td>
+      </tr>
+      <!-- Add more rows as needed -->
+    </tbody>
+  </table>
+</div>
+
+<script>
+  $(document).ready(function () {
+    $('#myTable').DataTable({
+      responsive: true
+    });
+  });
+</script>
+
+</body>
+</html>
