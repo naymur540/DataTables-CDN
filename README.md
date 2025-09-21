@@ -29,9 +29,7 @@ This is an example of a Bootstrap 5 DataTable integrated with jQuery.
   <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.13.8/js/dataTables.bootstrap5.min.js"></script>
 
-  <style>
-
-
+   <style>
     table.dataTable thead {
       background: #e5e7eb;
       color: #374151;
@@ -49,7 +47,8 @@ This is an example of a Bootstrap 5 DataTable integrated with jQuery.
 
     .dataTables_wrapper .dataTables_filter input {
       width: 100%;
-      padding: 6px 12px 6px 32px;
+      padding: 6px 12px 6px 28px;
+      /* reduce left padding */
       border-radius: 50px;
       border: 1px solid #d1d5db;
       transition: 0.3s;
@@ -58,16 +57,17 @@ This is an example of a Bootstrap 5 DataTable integrated with jQuery.
     .dataTables_wrapper .dataTables_filter input:focus {
       outline: none;
       border-color: #3b82f6;
-      box-shadow: 0 0 5px rgba(59,130,246,0.5);
+      box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
     }
 
-    /* Search icon inside input */
+    /* Search icon closer */
     .dataTables_wrapper .dataTables_filter::before {
       content: "\f002";
       font-family: "Font Awesome 6 Free";
       font-weight: 900;
       position: absolute;
-      left: 10px;
+      left: 8px;
+      /* closer to input */
       top: 50%;
       transform: translateY(-50%);
       color: #9ca3af;
@@ -75,10 +75,9 @@ This is an example of a Bootstrap 5 DataTable integrated with jQuery.
       font-size: 14px;
     }
 
+
     .dataTables_wrapper .dataTables_paginate {
       margin-top: 20px;
-      display: flex;
-      justify-content: center;
       gap: 6px;
     }
 
@@ -90,6 +89,7 @@ This is an example of a Bootstrap 5 DataTable integrated with jQuery.
         margin-bottom: 10px;
         max-width: 100%;
       }
+
       .dataTables_wrapper .dataTables_filter input {
         width: 100%;
       }
@@ -165,24 +165,25 @@ This is an example of a Bootstrap 5 DataTable integrated with jQuery.
 </div>
 
 <script>
-  $(document).ready(function () {
-    $('#myTable').DataTable({
-      paging: true,
-      lengthChange: true,
-      searching: true,
-      ordering: true,
-      info: true,
-      autoWidth: false,
-      responsive: true,
-      language: {
-        search: "_INPUT_",
-        searchPlaceholder: "Search agents...",
-        lengthMenu: "Show _MENU_ agents",
-        info: "Showing _START_ to _END_ of _TOTAL_ agents",
-       
-      }
+ $(document).ready(function () {
+      $('#myTable').DataTable({
+        paging: true,
+        lengthChange: true,
+        searching: true,
+        ordering: true,
+        info: true,
+        autoWidth: false,
+        responsive: true,
+        language: {
+          search: "_INPUT_",
+          searchPlaceholder: "Search agents...",
+          lengthMenu: "Show _MENU_ agents",
+          info: "Showing _START_ to _END_ of _TOTAL_ agents",
+
+        }
+
+      });
     });
-  });
 </script>
 
 </body>
